@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="793616eb-57bf-4f71-866a-2444276d69c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aDcePKF8kbI89J3J5wkPIfDTbv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.locadora.clientes.facade" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ViniciusNoriyukiAcan\Desktop\Prova_Final\locadoraClientes\src\main\java\br\com\locadora\clientes" />
+      <recent name="C:\Users\ViniciusNoriyukiAcan\Desktop\Prova_Final\locadoraClientes\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean jacoco:prepare-agent install jacoco:report" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ClienteControllerTest.deveBuscarCliente">
+    <configuration name="ClienteControllerTest.deveAlterarIdade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraClientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.clientes.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.clientes.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.clientes.controller.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="deveAlterarIdade" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteControllerTest.deveBuscarCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraClientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.clientes.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.clientes.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.clientes.controller.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="deveBuscarCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteControllerTest.deveListarClientes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraClientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.clientes.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.clientes.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.clientes.controller.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="deveListarClientes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteFacadeTest.deveBuscarCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraClientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.clientes.facade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.clientes.facade" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.clientes.facade.ClienteFacadeTest" />
+      <option name="METHOD_NAME" value="deveBuscarCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteFacadeTest.deveGerarErroBuscarCliente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraClientes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.clientes.facade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.clientes.facade" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.clientes.facade.ClienteFacadeTest" />
+      <option name="METHOD_NAME" value="deveGerarErroBuscarCliente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ClienteControllerTest.deveBuscarCliente" />
+        <item itemvalue="JUnit.ClienteFacadeTest.deveGerarErroBuscarCliente" />
+        <item itemvalue="JUnit.ClienteFacadeTest.deveBuscarCliente" />
+        <item itemvalue="JUnit.ClienteControllerTest.deveAlterarIdade" />
+        <item itemvalue="JUnit.ClienteControllerTest.deveListarClientes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="793616eb-57bf-4f71-866a-2444276d69c3" name="Default Changelist" comment="" />
+      <created>1586273699736</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586273699736</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Project_Structure" timestamp="1586273877973">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1586273877973" />
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1586286380914">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1586286380914" />
+    <state x="438" y="200" width="413" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586285629214">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="200" width="413" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1586285629214" />
+    <state x="350" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586277169858">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="350" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1586277169858" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1586787427864">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1586787427864" />
+    <state width="1237" height="189" key="GridCell.Tab.0.bottom" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.0.center" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.0.left" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.0.right" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.1.bottom" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.1.center" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.1.left" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state width="1237" height="189" key="GridCell.Tab.1.right" timestamp="1586785652665">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="189" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1586785652665" />
+    <state x="91" y="36" key="new project wizard" timestamp="1586354511521">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="36" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1586354511521" />
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1586708817067">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1586708817067" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/locadora/clientes/controller/ClienteController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/mapper/ClienteMapperTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/mapper/ClienteMapperTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/controller/ClienteControllerTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/controller/ClienteControllerTest.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/controller/ClienteControllerTest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/facade/ClienteFacadeTest.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/clientes/controller/ClienteControllerTest.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

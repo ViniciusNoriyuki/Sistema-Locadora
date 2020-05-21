@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79e8ea19-4eea-404d-819d-8c2a810e4ed7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aGGRodjLDs9pniHAhiLORbUnxA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.locadora.filmes.aluguel.facade" />
+      <recent name="br.com.locadora.filmes.filme.facade" />
+      <recent name="br.com.locadora.filmes.filme" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.locadora.filmes" />
+      <recent name="br.com.locadora.filmes.aluguel.mapper" />
+      <recent name="br.com.locadora.filmes.aluguel.facade" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ViniciusNoriyukiAcan\Desktop\locadoraFilmes\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean jacoco:prepare-agent install jacoco:report" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AluguelControllerTest.deveMostraraExtratoAluguelPorPeriodo">
+    <configuration name="AluguelControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraFilmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.filmes.aluguel.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.filmes.aluguel.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.filmes.aluguel.controller.AluguelControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AluguelControllerTest.deveMostraraExtratoAluguelPorPeriodo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraFilmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.filmes.aluguel.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.filmes.aluguel.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.locadora.filmes.aluguel.controller.AluguelControllerTest" />
+      <option name="METHOD_NAME" value="deveMostraraExtratoAluguelPorPeriodo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.locadora.filmes.aluguel.facade in locadoraFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraFilmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.filmes.aluguel.facade.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.filmes.aluguel.facade" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.locadora.filmes.aluguel.mapper in locadoraFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraFilmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.filmes.aluguel.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.filmes.aluguel.mapper" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.locadora.filmes.filme in locadoraFilmes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="locadoraFilmes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.locadora.filmes.filme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.locadora.filmes.filme" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AluguelControllerTest.deveMostraraExtratoAluguelPorPeriodo" />
+        <item itemvalue="JUnit.AluguelControllerTest" />
+        <item itemvalue="JUnit.br.com.locadora.filmes.aluguel.mapper in locadoraFilmes" />
+        <item itemvalue="JUnit.br.com.locadora.filmes.aluguel.facade in locadoraFilmes" />
+        <item itemvalue="JUnit.br.com.locadora.filmes.filme in locadoraFilmes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79e8ea19-4eea-404d-819d-8c2a810e4ed7" name="Default Changelist" comment="" />
+      <created>1586354511615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586354511615</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1586645916363">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1586645916363" />
+    <state x="223" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586556458247">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="223" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1586556458247" />
+    <state x="438" y="200" width="447" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586637140900">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="200" width="447" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1586637140900" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586555412963">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1586555412963" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586571272101">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1586571272101" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1586625322079">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1586625322079" />
+    <state width="1237" height="227" key="GridCell.Tab.0.bottom" timestamp="1586785645911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586785645911" />
+    <state width="1237" height="227" key="GridCell.Tab.0.center" timestamp="1586785645911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586785645911" />
+    <state width="1237" height="227" key="GridCell.Tab.0.left" timestamp="1586785645911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586785645911" />
+    <state width="1237" height="227" key="GridCell.Tab.0.right" timestamp="1586785645911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586785645911" />
+    <state width="1237" height="227" key="GridCell.Tab.1.bottom" timestamp="1586785645912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586785645912" />
+    <state width="1237" height="227" key="GridCell.Tab.1.center" timestamp="1586785645912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1586785645912" />
+    <state width="1237" height="227" key="GridCell.Tab.1.left" timestamp="1586785645911">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1586785645911" />
+    <state width="1237" height="227" key="GridCell.Tab.1.right" timestamp="1586785645912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="227" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1586785645912" />
+    <state x="348" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1586434993196">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="348" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1586434993196" />
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup" timestamp="1586787588345">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1586787588345" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/locadora/filmes/filme/facade/FilmeFacade.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/locadora/filmes/filme/controller/FilmeController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>183</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/facade/FilmeFacadeTest.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/mapper/FilmeMapperTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/mapper/FilmeMapperTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/mapper/FilmeMapperTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/controller/FilmeControllerTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/controller/FilmeControllerTest.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/controller/FilmeControllerTest.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/filme/controller/FilmeControllerTest.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>284</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>293</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>223</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>248</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>277</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/mapper/AluguelMapperTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/mapper/AluguelMapperTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/mapper/AluguelMapperTest.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/mapper/AluguelMapperTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>144</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/facade/AluguelFacadeTest.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/locadora/filmes/aluguel/controller/AluguelControllerTest.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

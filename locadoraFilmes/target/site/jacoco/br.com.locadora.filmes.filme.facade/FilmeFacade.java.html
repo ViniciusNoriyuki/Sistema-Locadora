@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FilmeFacade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">locadoraFilmes</a> &gt; <a href="index.source.html" class="el_package">br.com.locadora.filmes.filme.facade</a> &gt; <span class="el_source">FilmeFacade.java</span></div><h1>FilmeFacade.java</h1><pre class="source lang-java linenums">package br.com.locadora.filmes.filme.facade;
+
+import br.com.locadora.filmes.filme.mapper.FilmeMapper;
+import br.com.locadora.filmes.filme.model.FilmeEntity;
+import br.com.locadora.filmes.filme.model.FilmeEntrada;
+import br.com.locadora.filmes.filme.model.FilmeSaida;
+import br.com.locadora.filmes.filme.repository.FilmeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L15">public class FilmeFacade {</span>
+
+    @Autowired
+    FilmeRepository filmeRepository;
+
+    public FilmeSaida salvarFilme(FilmeEntrada filmeEntrada) throws Exception {
+
+<span class="fc" id="L22">        validarDadosEntrada(filmeEntrada);</span>
+
+<span class="fc" id="L24">        FilmeEntity filmeEntity = FilmeMapper.INSTANCE.converterEntradaParaEntity(filmeEntrada);</span>
+<span class="fc" id="L25">        filmeEntity.setStatusAluguel(&quot;Disponivel&quot;);</span>
+
+<span class="fc" id="L27">        filmeEntity = filmeRepository.save(filmeEntity);</span>
+
+<span class="fc" id="L29">        return FilmeMapper.INSTANCE.converterEntityParaSaida(filmeEntity);</span>
+    }
+
+    public void validarDadosEntrada(FilmeEntrada filmeEntrada) throws Exception {
+<span class="fc bfc" id="L33" title="All 6 branches covered.">        if (filmeEntrada.getNome() == null || filmeEntrada.getGenero() == null || filmeEntrada.getDataLancamento() == null ||</span>
+<span class="fc bfc" id="L34" title="All 4 branches covered.">                filmeEntrada.getClassificacaoIndicativa() == null || filmeEntrada.getValorFilme() == null ||</span>
+<span class="fc bfc" id="L35" title="All 6 branches covered.">                filmeEntrada.getNome().isEmpty() || filmeEntrada.getGenero().isEmpty() || filmeEntrada.getClassificacaoIndicativa() &lt; 0 ||</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                filmeEntrada.getValorFilme() &lt; 0)</span>
+        {
+<span class="fc" id="L38">            throw new Exception(&quot;Dado invalido para entrada&quot;);</span>
+        }
+<span class="fc" id="L40">    }</span>
+
+    public List&lt;FilmeSaida&gt; listarFilmes() throws Exception {
+
+<span class="fc" id="L44">        List&lt;FilmeEntity&gt; listaFilmeEntity = filmeRepository.findAll();</span>
+
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (listaFilmeEntity.isEmpty()){</span>
+<span class="fc" id="L47">            throw new Exception(&quot;Nao ha filmes no banco de dados&quot;);</span>
+        }
+
+<span class="fc" id="L50">        return FilmeMapper.INSTANCE.converterListEntityParaListSaida(listaFilmeEntity);</span>
+    }
+
+    public FilmeSaida alterarValorFilme(Long idFilme , FilmeEntrada entrada) throws Exception {
+
+        FilmeEntity entidade;
+<span class="fc" id="L56">        Optional&lt;FilmeEntity&gt; retornoBanco = filmeRepository.findById(idFilme);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L58">            throw new Exception(&quot;Filme nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L61">        entidade = retornoBanco.get();</span>
+
+<span class="fc bfc" id="L63" title="All 6 branches covered.">        if (entrada.getValorFilme() == null || entrada.getValorFilme() &lt; 0 || entrada.getValorFilme().equals(entidade.getValorFilme())){</span>
+<span class="fc" id="L64">            throw new Exception(&quot;Dado invalido para alterar valor do filme&quot;);</span>
+        }
+
+<span class="fc" id="L67">        entidade.setValorFilme(entrada.getValorFilme());</span>
+
+<span class="fc" id="L69">        entidade = filmeRepository.save(entidade);</span>
+
+<span class="fc" id="L71">        return FilmeMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+
+    public FilmeSaida buscarFilme(Long idFilme) throws Exception {
+        FilmeEntity entidade;
+
+<span class="fc" id="L77">        Optional&lt;FilmeEntity&gt; retornoBanco = filmeRepository.findById(idFilme);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L79">            throw new Exception(&quot;Filme nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L82">        entidade = retornoBanco.get();</span>
+
+<span class="fc" id="L84">        return FilmeMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

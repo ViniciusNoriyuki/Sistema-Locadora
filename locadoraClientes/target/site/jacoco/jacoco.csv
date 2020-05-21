@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+locadoraClientes,br.com.locadora.clientes.controller,ClienteController,0,23,0,0,0,5,0,5,0,5
+locadoraClientes,br.com.locadora.clientes.mapper,ClienteMapper,0,5,0,0,0,1,0,1,0,1
+locadoraClientes,br.com.locadora.clientes.facade,ClienteFacade,0,122,0,20,0,24,0,15,0,5

@@ -1,0 +1,10 @@
+br\com\locadora\clientes\mapper\ClienteMapperImpl.class
+br\com\locadora\clientes\controller\ClienteController.class
+br\com\locadora\clientes\model\ClienteEntrada.class
+br\com\locadora\clientes\model\ClienteSaida.class
+br\com\locadora\clientes\repository\ClienteRepository.class
+br\com\locadora\clientes\model\QClienteEntity.class
+br\com\locadora\clientes\facade\ClienteFacade.class
+br\com\locadora\clientes\mapper\ClienteMapper.class
+br\com\locadora\clientes\ClientesApplication.class
+br\com\locadora\clientes\model\ClienteEntity.class

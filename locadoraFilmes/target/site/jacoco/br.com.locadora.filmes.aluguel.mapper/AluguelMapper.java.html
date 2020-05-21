@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AluguelMapper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">locadoraFilmes</a> &gt; <a href="index.source.html" class="el_package">br.com.locadora.filmes.aluguel.mapper</a> &gt; <span class="el_source">AluguelMapper.java</span></div><h1>AluguelMapper.java</h1><pre class="source lang-java linenums">package br.com.locadora.filmes.aluguel.mapper;
+
+import br.com.locadora.filmes.aluguel.model.AluguelEntity;
+import br.com.locadora.filmes.aluguel.model.AluguelSaida;
+import br.com.locadora.filmes.filme.model.FilmeEntity;
+import br.com.locadora.filmes.filme.model.FilmeSaida;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
+import org.mapstruct.factory.Mappers;
+
+import java.util.Date;
+import java.util.List;
+
+@Mapper
+public interface AluguelMapper {
+
+<span class="fc" id="L18">    AluguelMapper INSTANCE = Mappers.getMapper(AluguelMapper.class);</span>
+
+    AluguelSaida converterEntityParaSaida(AluguelEntity aluguelEntity);
+
+    List&lt;AluguelSaida&gt; converterListEntityParaListSaida(List&lt;AluguelEntity&gt; listaAluguelEntity);
+
+    @Mappings({
+            @Mapping(source = &quot;idCliente&quot;, target = &quot;idCliente&quot;),
+            @Mapping(source = &quot;listaFilmeEntity&quot;, target = &quot;listaFilmes&quot;),
+            @Mapping(source = &quot;dataAluguel&quot;, target = &quot;dataAluguel&quot;),
+            @Mapping(source = &quot;statusDevolucao&quot;, target = &quot;statusDevolucao&quot;),
+            @Mapping(source = &quot;valorTotal&quot;, target = &quot;valorTotal&quot;),
+    })
+    AluguelEntity mapToEntity(Long idCliente, List&lt;FilmeEntity&gt; listaFilmeEntity, Date dataAluguel, Date dataDevolucao, String statusDevolucao, Double valorTotal);
+
+    List&lt;FilmeSaida&gt; listToSaida(List&lt;FilmeEntity&gt; listaFilmes);
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

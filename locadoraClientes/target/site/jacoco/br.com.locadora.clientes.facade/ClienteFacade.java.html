@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClienteFacade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">locadoraClientes</a> &gt; <a href="index.source.html" class="el_package">br.com.locadora.clientes.facade</a> &gt; <span class="el_source">ClienteFacade.java</span></div><h1>ClienteFacade.java</h1><pre class="source lang-java linenums">package br.com.locadora.clientes.facade;
+
+import br.com.locadora.clientes.mapper.ClienteMapper;
+import br.com.locadora.clientes.model.ClienteEntity;
+import br.com.locadora.clientes.model.ClienteEntrada;
+import br.com.locadora.clientes.model.ClienteSaida;
+import br.com.locadora.clientes.repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L15">public class ClienteFacade {</span>
+
+    @Autowired
+    ClienteRepository clienteRepository;
+
+    public ClienteSaida salvar(ClienteEntrada clienteEntrada) throws Exception {
+
+<span class="fc bfc" id="L22" title="All 8 branches covered.">        if (clienteEntrada.getNome() == null || clienteEntrada.getIdade() == null || clienteEntrada.getNome().isEmpty() || clienteEntrada.getIdade() &lt; 0){</span>
+<span class="fc" id="L23">            throw new Exception(&quot;Dado invalido para entrada&quot;);</span>
+        }
+
+<span class="fc" id="L26">        ClienteEntity clienteEntity = ClienteMapper.INSTANCE.converterEntradaParaEntity(clienteEntrada);</span>
+
+<span class="fc" id="L28">        clienteEntity = clienteRepository.save(clienteEntity);</span>
+
+<span class="fc" id="L30">        return ClienteMapper.INSTANCE.converterEntityParaSaida(clienteEntity);</span>
+    }
+
+    public List&lt;ClienteSaida&gt; listarClientes() throws Exception {
+
+<span class="fc" id="L35">        List&lt;ClienteEntity&gt; listaClienteEntity = clienteRepository.findAll();</span>
+
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (listaClienteEntity.isEmpty()){</span>
+<span class="fc" id="L38">            throw new Exception(&quot;Nao ha clientes na lista&quot;);</span>
+        }
+
+<span class="fc" id="L41">        return ClienteMapper.INSTANCE.converterListEntityParaListSaida(listaClienteEntity);</span>
+    }
+
+    public ClienteSaida alterarIdade(Long idCliente , ClienteEntrada entrada) throws Exception {
+
+        ClienteEntity entidade;
+<span class="fc" id="L47">        Optional&lt;ClienteEntity&gt; retornoBanco = clienteRepository.findById(idCliente);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L49">            throw new Exception(&quot;Cliente nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L52">        entidade = retornoBanco.get();</span>
+
+<span class="fc bfc" id="L54" title="All 6 branches covered.">        if (entrada.getIdade() == null || entrada.getIdade() &lt; 0 || entidade.getIdade().equals(entrada.getIdade())){</span>
+<span class="fc" id="L55">            throw new Exception(&quot;Dado invalido para alterar idade&quot;);</span>
+        }
+
+<span class="fc" id="L58">        entidade.setIdade(entrada.getIdade());</span>
+
+<span class="fc" id="L60">        entidade = clienteRepository.save(entidade);</span>
+
+<span class="fc" id="L62">        return ClienteMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+
+    public ClienteSaida buscarCliente(Long idCliente) throws Exception {
+        ClienteEntity entidade;
+
+<span class="fc" id="L68">        Optional&lt;ClienteEntity&gt; retornoBanco = clienteRepository.findById(idCliente);</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L70">            throw new Exception(&quot;Cliente nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L73">        entidade = retornoBanco.get();</span>
+
+<span class="fc" id="L75">        return ClienteMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

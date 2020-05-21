@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/locadoraClientes/locadoraClientes.iml" filepath="$PROJECT_DIR$/locadoraClientes/locadoraClientes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locadoraFilmes/locadoraFilmes.iml" filepath="$PROJECT_DIR$/locadoraFilmes/locadoraFilmes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locadoraGateway/locadoraGateway.iml" filepath="$PROJECT_DIR$/locadoraGateway/locadoraGateway.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AluguelFacade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">locadoraFilmes</a> &gt; <a href="index.source.html" class="el_package">br.com.locadora.filmes.aluguel.facade</a> &gt; <span class="el_source">AluguelFacade.java</span></div><h1>AluguelFacade.java</h1><pre class="source lang-java linenums">package br.com.locadora.filmes.aluguel.facade;
+
+import br.com.locadora.filmes.aluguel.mapper.AluguelMapper;
+import br.com.locadora.filmes.aluguel.model.AluguelEntity;
+import br.com.locadora.filmes.aluguel.model.AluguelEntrada;
+import br.com.locadora.filmes.aluguel.model.AluguelSaida;
+import br.com.locadora.filmes.aluguel.repository.AluguelRepository;
+import br.com.locadora.filmes.filme.model.FilmeEntity;
+import br.com.locadora.filmes.filme.repository.FilmeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
+
+@Service
+<span class="fc" id="L16">public class AluguelFacade {</span>
+
+    @Autowired
+    FilmeRepository filmeRepository;
+    @Autowired
+    AluguelRepository aluguelRepository;
+
+    public AluguelSaida alugarFilme(Long idCliente, AluguelEntrada aluguelEntrada) throws Exception {
+<span class="fc" id="L24">        List&lt;FilmeEntity&gt; listaFilmeEntity = preencherListaFilmes(aluguelEntrada);</span>
+
+<span class="fc" id="L26">        Calendar calendar = Calendar.getInstance();</span>
+<span class="fc" id="L27">        calendar.setTime(aluguelEntrada.getDataAluguel());</span>
+<span class="fc" id="L28">        calendar.add(Calendar.DATE, +7);</span>
+<span class="fc" id="L29">        Date dataDevolucao = calendar.getTime();</span>
+
+<span class="fc" id="L31">        Double valorTotal = 0D;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (FilmeEntity filmeEntity : listaFilmeEntity) {</span>
+<span class="fc" id="L33">            valorTotal = valorTotal + filmeEntity.getValorFilme();</span>
+<span class="fc" id="L34">        }</span>
+
+<span class="fc" id="L36">        String statusDevolucao = &quot;Nao devolvido&quot;;</span>
+
+<span class="fc" id="L38">        AluguelEntity aluguelEntity = AluguelMapper.INSTANCE.mapToEntity(idCliente, listaFilmeEntity, aluguelEntrada.getDataAluguel(), dataDevolucao, statusDevolucao, valorTotal);</span>
+
+<span class="fc" id="L40">        aluguelRepository.save(aluguelEntity);</span>
+
+<span class="fc" id="L42">        AluguelSaida saida = AluguelMapper.INSTANCE.converterEntityParaSaida(aluguelEntity);</span>
+
+<span class="fc" id="L44">        return saida;</span>
+    }
+
+    public List&lt;AluguelSaida&gt; extratoAluguelPorPeriodo(Date dateFrom, Date dateTo) throws Exception {
+<span class="fc" id="L48">        List&lt;AluguelEntity&gt; listaTransacoesEntity = aluguelRepository.findAll();</span>
+
+<span class="fc" id="L50">        List&lt;AluguelSaida&gt; listaTransacoesSaida = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (AluguelEntity transacaoEntity : listaTransacoesEntity) {</span>
+<span class="fc bfc" id="L53" title="All 4 branches covered.">            if (dateFrom.compareTo(transacaoEntity.getDataAluguel()) &lt;= 0 &amp;&amp; dateTo.compareTo(transacaoEntity.getDataAluguel()) &gt;= 0) {</span>
+<span class="fc" id="L54">                listaTransacoesSaida.add(AluguelMapper.INSTANCE.converterEntityParaSaida(transacaoEntity));</span>
+            }
+<span class="fc" id="L56">        }</span>
+
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (listaTransacoesSaida.isEmpty()) {</span>
+<span class="fc" id="L59">            throw new Exception(&quot;Nao ha filmes alugados no periodo informado&quot;);</span>
+        }
+
+<span class="fc" id="L62">        return listaTransacoesSaida;</span>
+    }
+
+    public AluguelSaida devolverFilme(Long idAluguel, Long idCliente) throws Exception {
+
+<span class="fc" id="L67">        Optional&lt;AluguelEntity&gt; retornoBanco = aluguelRepository.findById(idAluguel);</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L69">            throw new Exception(&quot;Aluguel nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L72">        AluguelEntity entidade = retornoBanco.get();</span>
+
+<span class="fc" id="L74">        List&lt;FilmeEntity&gt; listaFilmes = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (entidade.getIdCliente().equals(idCliente)){</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">            if (entidade.getStatusDevolucao().equals(&quot;Devolvido&quot;)){</span>
+<span class="fc" id="L78">                throw new Exception(&quot;Este cliente ja devolveu os filmes&quot;);</span>
+            }
+<span class="fc" id="L80">            entidade.setStatusDevolucao(&quot;Devolvido&quot;);</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">            for (FilmeEntity filmeEntity : entidade.getListaFilmes()){</span>
+<span class="fc" id="L82">                filmeEntity.setStatusAluguel(&quot;Disponivel&quot;);</span>
+<span class="fc" id="L83">                filmeEntity = filmeRepository.save(filmeEntity);</span>
+<span class="fc" id="L84">                listaFilmes.add(filmeEntity);</span>
+<span class="fc" id="L85">            }</span>
+        } else {
+<span class="fc" id="L87">            throw new Exception(&quot;Cliente nao eh o mesmo para este aluguel&quot;);</span>
+        }
+
+<span class="fc" id="L90">        entidade = aluguelRepository.save(entidade);</span>
+
+<span class="fc" id="L92">        return AluguelMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+
+    public List&lt;AluguelSaida&gt; relatorioAlugueisVencidosENaoDevolvidos(Date dateFrom) throws Exception {
+<span class="fc" id="L96">        List&lt;AluguelEntity&gt; listaTransacoesEntity = aluguelRepository.findAll();</span>
+
+<span class="fc" id="L98">        List&lt;AluguelSaida&gt; listaTransacoesSaida = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        for (AluguelEntity transacaoEntity : listaTransacoesEntity) {</span>
+<span class="fc bfc" id="L101" title="All 4 branches covered.">            if (dateFrom.compareTo(transacaoEntity.getDataDevolucao()) &gt; 0 &amp;&amp; transacaoEntity.getStatusDevolucao().equals(&quot;Nao devolvido&quot;)) {</span>
+<span class="fc" id="L102">                listaTransacoesSaida.add(AluguelMapper.INSTANCE.converterEntityParaSaida(transacaoEntity));</span>
+            }
+<span class="fc" id="L104">        }</span>
+
+<span class="fc bfc" id="L106" title="All 2 branches covered.">        if (listaTransacoesSaida.isEmpty()) {</span>
+<span class="fc" id="L107">            throw new Exception(&quot;Nao ha filmes com aluguel vencido no periodo informado&quot;);</span>
+        }
+
+<span class="fc" id="L110">        return listaTransacoesSaida;</span>
+    }
+
+    public List&lt;AluguelSaida&gt; listarTodosAlugueis() throws Exception {
+<span class="fc" id="L114">        List&lt;AluguelEntity&gt; listaTransacoesEntity = aluguelRepository.findAll();</span>
+
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (listaTransacoesEntity.isEmpty()) {</span>
+<span class="fc" id="L117">            throw new Exception(&quot;Nao ha alugueis realizados&quot;);</span>
+        }
+
+<span class="fc" id="L120">        return AluguelMapper.INSTANCE.converterListEntityParaListSaida(listaTransacoesEntity);</span>
+    }
+
+    public AluguelSaida buscarAluguel(Long idAluguel) throws Exception {
+        AluguelEntity entidade;
+
+<span class="fc" id="L126">        Optional&lt;AluguelEntity&gt; retornoBanco = aluguelRepository.findById(idAluguel);</span>
+<span class="fc bfc" id="L127" title="All 2 branches covered.">        if (!retornoBanco.isPresent()){</span>
+<span class="fc" id="L128">            throw new Exception(&quot;Aluguel nao encontrado&quot;);</span>
+        }
+
+<span class="fc" id="L131">        entidade = retornoBanco.get();</span>
+
+<span class="fc" id="L133">        return AluguelMapper.INSTANCE.converterEntityParaSaida(entidade);</span>
+    }
+
+    public List&lt;FilmeEntity&gt; preencherListaFilmes(AluguelEntrada aluguelEntrada) throws Exception {
+<span class="fc" id="L137">        List&lt;FilmeEntity&gt; listaFilmes = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        for (Long idFilme : aluguelEntrada.getListaFilmes()){</span>
+<span class="fc" id="L140">            FilmeEntity filmeEntity = retornarFilmeEntity(idFilme);</span>
+<span class="fc bfc" id="L141" title="All 2 branches covered.">            if (filmeEntity.getStatusAluguel().equals(&quot;Alugado&quot;)){</span>
+<span class="fc" id="L142">                throw new Exception(&quot;Filme ja se encontra alugado&quot;);</span>
+            }
+<span class="fc" id="L144">            filmeEntity.setStatusAluguel(&quot;Alugado&quot;);</span>
+<span class="fc" id="L145">            listaFilmes.add(filmeEntity);</span>
+<span class="fc" id="L146">        }</span>
+
+<span class="fc" id="L148">        return listaFilmes;</span>
+    }
+
+    public FilmeEntity retornarFilmeEntity(Long idFilme) throws Exception {
+        FilmeEntity entidade;
+<span class="fc" id="L153">        Optional&lt;FilmeEntity&gt; retornoBanco = filmeRepository.findById(idFilme);</span>
+
+<span class="fc bfc" id="L155" title="All 2 branches covered.">        if (!retornoBanco.isPresent()) {</span>
+<span class="fc" id="L156">            throw new Exception(&quot;Filme nao encontrado!&quot;);</span>
+        }
+<span class="fc" id="L158">        entidade = retornoBanco.get();</span>
+
+<span class="fc" id="L160">        return entidade;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
